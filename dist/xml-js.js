@@ -4122,7 +4122,7 @@ function onError(error) {
 
 module.exports = function (xml, userOptions) {
 
-  var parser = pureJsParser ? sax.parser(true, {}) : parser = new expat.Parser('UTF-8');
+  var parser = pureJsParser ? sax.parser(false, {}) : parser = new expat.Parser('UTF-8');
   var result = {};
   currentElement = result;
 
